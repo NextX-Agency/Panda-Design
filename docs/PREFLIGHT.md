@@ -11,8 +11,9 @@ Statussen: BEVESTIGD · VOORLOPIG · ONTBREEKT · NIET VAN TOEPASSING.
 | 1 | Identiteit: profielen | VOORLOPIG | S1 LinkedIn; S2 Facebook-pagina-ID via directory (secundair) | Panda bevestigt welke profielen officieel zijn | Publicatie |
 | 1 | Identiteit: domein | ONTBREEKT | S3 pandanv.com is alleen kandidaat; relatie onbevestigd | Domein bevestigen of vercel.app-URL accepteren | Publicatie |
 | 2 | Logo + varianten | ONTBREEKT | Geen SVG/PNG ontvangen (audit p.9) | SVG of hoge-resolutie PNG aanleveren | Definitieve bouw |
-| 2 | Kleurfamilie | VOORLOPIG | S9 aangeleverd chatbericht: donkerblauw, zwart, wit (bericht, geen merkbestand; bestand zelf niet in deze sessie) | Officiële kleurcodes uit huisstijl | Definitieve bouw |
-| 2 | Exacte hexcodes | ONTBREEKT | `#173B8F` / `#111111` zijn ontwerptinten, niet gemeten | Huisstijl of origineel bestand | Definitieve bouw |
+| 2 | Kleurfamilie | BEVESTIGD (opdrachtgever, 3 nov): zwart #000000, wit #FFFFFF, Deep Royal Blue #00249C |
+| 2 | (oud) Kleurfamilie | VERVALLEN | S9 aangeleverd chatbericht: donkerblauw, zwart, wit (bericht, geen merkbestand; bestand zelf niet in deze sessie) | Officiële kleurcodes uit huisstijl | Definitieve bouw |
+| 2 | Exacte hexcodes | BEVESTIGD door opdrachtgever | `#173B8F` / `#111111` zijn ontwerptinten, niet gemeten | Huisstijl of origineel bestand | Definitieve bouw |
 | 3 | Contentstijl eigen posts (4–6) | ONTBREEKT | A1 niet beoordeeld; A2–A9 gaven 404. Geen beelden bekeken → geen stijlanalyse | 4–6 eigen Panda-posts aanleveren (los van klantwerk) | Definitieve bouw |
 | 4 | Brush strokes | VOORLOPIG | Gewenste richting (klokreferentie S9). Aansluiting op logo niet toetsbaar zonder logo. Geen bewijs van Kung Fu Panda-oorsprong | Logo vergelijken; vormen eventueel bijstellen | Definitieve bouw |
 | 5 | Portfolio: 3 cases | ONTBREEKT | Geen cases, originelen, rol, credits of toestemming | Per case: naam, beelden (1 hoofd + 2 details), rol, credits, toestemming | Definitieve bouw |
@@ -42,3 +43,7 @@ Statussen: BEVESTIGD · VOORLOPIG · ONTBREEKT · NIET VAN TOEPASSING.
 4. Akkoord of correcties op: naam "Panda", de drie dienstgroepen, de werkwijze en de voorgestelde teksten.
 
 Optioneel: studiofoto, reel/clips met poster, officiële sociale profielen, domein.
+
+## Update 3 nov — redesign
+
+Op feedback (te veel boilerplate) is de pagina herontworpen: posterachtige hero met grote droge penseelstreek, minimale tekst, geen statuslabels op de pagina. Werkwijze-sectie en casedialogen zijn verwijderd tot er echte cases zijn. Nieuwe leads: Facebook "Panda Design Agency" (facebook.com/PandaGraphics.su) en website pandadesign.sr. Beide konden vanuit deze sessie niet worden opgehaald (netwerkbeleid).

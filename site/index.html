@@ -1,331 +1,121 @@
 <!doctype html>
-<html lang="nl" class="no-js">
+<html lang="nl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panda — creatieve studio, Paramaribo (concept)</title>
-  <meta name="description" content="Conceptpreview voor de website van Panda, creatieve studio in Paramaribo: merk & design, content & campagnes, web & digitaal.">
-  <!-- Conceptpreview: niet indexeren. Verwijderen bij publicatie (zie docs/PUBLICATIE.md). -->
+  <title>Panda Design Agency — Paramaribo</title>
+  <meta name="description" content="Panda Design Agency: merk, content en web uit Paramaribo.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <script>document.documentElement.classList.add("js")</script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <!-- Gedeelde penseelfilter: droge borstelstrepen + gerafelde rand. Decoratief. -->
   <svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
     <defs>
-      <filter id="dry-brush" x="-4%" y="-30%" width="108%" height="160%" color-interpolation-filters="sRGB">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="2 7" result="soft"/>
-        <feTurbulence type="fractalNoise" baseFrequency="0.0035 0.16" numOctaves="4" seed="11" result="noise"/>
+      <!-- Droge penseelstreek: vaste kern, rafelige borstelranden. -->
+      <filter id="dry" x="-5%" y="-30%" width="110%" height="160%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3 10" result="soft"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.0025 0.11" numOctaves="4" seed="11" result="noise"/>
         <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="n"/>
-        <feComposite in="soft" in2="n" operator="arithmetic" k2="7" k3="-7" k4="-2.2" result="bristles"/>
+        <feComposite in="soft" in2="n" operator="arithmetic" k2="7" k3="-7" k4="-1.75" result="bristles"/>
         <feComposite in="SourceGraphic" in2="bristles" operator="in" result="ink"/>
-        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4" result="grain"/>
-        <feDisplacementMap in="ink" in2="grain" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="grain"/>
+        <feDisplacementMap in="ink" in2="grain" scale="6" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
-      <filter id="dry-brush-sm" x="-4%" y="-40%" width="108%" height="180%" color-interpolation-filters="sRGB">
+      <filter id="dry-sm" x="-5%" y="-40%" width="110%" height="180%" color-interpolation-filters="sRGB">
         <feGaussianBlur in="SourceAlpha" stdDeviation="1.5 2.5" result="soft"/>
         <feTurbulence type="fractalNoise" baseFrequency="0.005 0.3" numOctaves="3" seed="23" result="noise"/>
         <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="n"/>
         <feComposite in="soft" in2="n" operator="arithmetic" k2="6" k3="-6" k4="-1.3" result="bristles"/>
-        <feComposite in="SourceGraphic" in2="bristles" operator="in" result="ink"/>
-        <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="5" result="grain"/>
-        <feDisplacementMap in="ink" in2="grain" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+        <feComposite in="SourceGraphic" in2="bristles" operator="in"/>
       </filter>
-      <!-- droger naar de staart toe -->
-      <linearGradient id="dry-fade-g" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#8a8a8a"/>
+      <linearGradient id="fade-g" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#fff"/><stop offset="1" stop-color="#777"/>
       </linearGradient>
-      <mask id="dry-fade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#dry-fade-g)"/></mask>
-      <!-- 1. brede droge streep -->
-      <symbol id="stroke-broad" viewBox="0 0 1200 200">
-        <path mask="url(#dry-fade)" d="M34 112C18 74 58 44 124 48 360 36 640 54 900 60c122 3 214 14 282 34-60 14-162 30-282 42-262 18-520 14-770 16-58 1-92-12-96-40Z"/>
-        <path mask="url(#dry-fade)" d="M940 70c90 4 170 14 236 28-70 4-160 0-236-6Z" opacity=".7"/>
+      <mask id="fade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#fade-g)"/></mask>
+      <symbol id="stroke" viewBox="0 0 1200 200" preserveAspectRatio="none">
+        <path mask="url(#fade)" d="M34 112C18 74 58 44 124 48 360 36 640 54 900 60c122 3 214 14 282 34-60 14-162 30-282 42-262 18-520 14-770 16-58 1-92-12-96-40Z"/>
+        <path mask="url(#fade)" d="M940 70c90 4 170 14 236 28-70 4-160 0-236-6Z" opacity=".7"/>
       </symbol>
-      <!-- 2. korte onderstreping -->
-      <symbol id="stroke-short" viewBox="0 0 600 64" preserveAspectRatio="none">
-        <path mask="url(#dry-fade)" d="M10 36C110 18 340 10 592 20c-100 14-330 26-578 30-10-1-12-8-4-14Z"/>
+      <symbol id="flick" viewBox="0 0 600 64" preserveAspectRatio="none">
+        <path mask="url(#fade)" d="M10 36C110 18 340 10 592 20c-100 14-330 26-578 30-10-1-12-8-4-14Z"/>
       </symbol>
     </defs>
   </svg>
 
   <a class="skip" href="#main">Naar de inhoud</a>
 
-  <aside class="concept-bar" aria-label="Conceptstatus">
-    <strong>Conceptpreview</strong> — niet publiceren. Gearceerde vlakken wachten op goedgekeurd materiaal van Panda; teksten zijn voorstellen.
-  </aside>
-
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <!-- LAYOUTPLAATS: officieel logo (SVG). "Panda" is de werknaam. -->
-      <a class="wordmark" href="#top" aria-label="Panda — naar boven">
-        <span class="wordmark-text">Panda</span>
-        <span class="wordmark-note" aria-hidden="true">logo volgt</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-label">Menu</span>
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Hoofdmenu">
-        <ul>
-          <li><a href="#werk">Werk</a></li>
-          <li><a href="#diensten">Diensten</a></li>
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="top">
+    <a class="logo" href="#main" aria-label="Panda Design Agency, naar boven">PANDA</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Hoofdmenu">
+      <a href="#werk">Werk</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main id="main">
-    <!-- 01 HERO -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <p class="eyebrow hero-eyebrow">Creatieve studio · Paramaribo</p>
-        <h1 id="hero-title" class="hero-title">
-          Werk dat
-          <span class="mark">blijft hangen.<svg class="ink ink-under" aria-hidden="true" focusable="false"><use href="#stroke-short"/></svg></span>
-        </h1>
-        <div class="hero-intro">
-          <p>Panda helpt merken zichtbaar en herkenbaar te worden: met visuele identiteit, content en een digitale presentatie die klopt.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#werk">Bekijk ons werk</a>
-            <a class="btn btn-ghost" href="#contact">Bespreek je project</a>
-          </div>
-        </div>
-
-        <div class="hero-media">
-          <svg class="ink ink-broad hero-ink" aria-hidden="true" focusable="false"><use href="#stroke-broad"/></svg>
-          <figure class="slot slot-wide">
-            <span class="slot-label">Layoutplaats · Hoofdbeeld case 01</span>
-            <span class="slot-need">Origineel projectbeeld + publicatietoestemming nodig</span>
-          </figure>
-          <figure class="slot slot-detail">
-            <span class="slot-label">Detail · zelfde case</span>
-            <span class="slot-need">Proces of toepassing</span>
-          </figure>
-        </div>
-      </div>
+    <section class="hero" aria-label="Introductie">
+      <svg class="brush hero-brush" aria-hidden="true" focusable="false"><use href="#stroke"/></svg>
+      <h1 class="hero-title">Werk dat<br>blijft hangen.</h1>
+      <p class="hero-sub">Design studio · Paramaribo</p>
+      <a class="hero-cta" href="#werk">Bekijk werk <span aria-hidden="true">↓</span></a>
     </section>
 
-    <!-- 02 WERK -->
-    <section class="work" id="werk" aria-labelledby="werk-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">01 / Geselecteerd werk</p>
-          <h2 id="werk-title">Drie projecten, <span class="nowrap">met context.</span></h2>
-          <p class="section-lede">Per project: wat er gevraagd werd, wat Panda zelf deed en wie er nog meer aan werkte.</p>
-        </div>
-
-        <div class="cases">
-          <article class="case case-1" id="case-01" data-reveal>
-            <figure class="slot case-media" style="--ratio: 16 / 9">
-              <span class="slot-label">Case 01 · hoofdbeeld</span>
-              <span class="slot-need">Breed formaat, bijv. identiteit op dragers</span>
-            </figure>
-            <div class="case-body">
-              <p class="case-meta"><span>Merk &amp; design</span></p>
-              <h3 class="case-title"><span class="todo">Projectnaam te bevestigen</span></h3>
-              <dl class="case-facts">
-                <div><dt>Opdracht</dt><dd><span class="todo">Korte omschrijving van de vraag</span></dd></div>
-                <div><dt>Rol Panda</dt><dd><span class="todo">Exacte bijdrage</span></dd></div>
-                <div><dt>Credits</dt><dd><span class="todo">Partners of fotograaf</span></dd></div>
-              </dl>
-              <button class="case-open link-arrow" type="button" data-case="01" aria-haspopup="dialog">Bekijk case 01</button>
-            </div>
-          </article>
-
-          <article class="case case-2" id="case-02" data-reveal>
-            <figure class="slot case-media" style="--ratio: 4 / 5">
-              <span class="slot-label">Case 02 · hoofdbeeld</span>
-              <span class="slot-need">Staand formaat, bijv. campagne</span>
-            </figure>
-            <div class="case-body">
-              <p class="case-meta"><span>Content &amp; campagnes</span></p>
-              <h3 class="case-title"><span class="todo">Projectnaam te bevestigen</span></h3>
-              <dl class="case-facts">
-                <div><dt>Opdracht</dt><dd><span class="todo">Korte omschrijving</span></dd></div>
-                <div><dt>Rol Panda</dt><dd><span class="todo">Exacte bijdrage</span></dd></div>
-              </dl>
-              <button class="case-open link-arrow" type="button" data-case="02" aria-haspopup="dialog">Bekijk case 02</button>
-            </div>
-          </article>
-
-          <article class="case case-3" id="case-03" data-reveal>
-            <figure class="slot case-media" style="--ratio: 3 / 2">
-              <span class="slot-label">Case 03 · hoofdbeeld</span>
-              <span class="slot-need">Liggend, bijv. website op scherm</span>
-            </figure>
-            <div class="case-body">
-              <p class="case-meta"><span>Web &amp; digitaal</span></p>
-              <h3 class="case-title"><span class="todo">Projectnaam te bevestigen</span></h3>
-              <dl class="case-facts">
-                <div><dt>Opdracht</dt><dd><span class="todo">Korte omschrijving</span></dd></div>
-                <div><dt>Rol Panda</dt><dd><span class="todo">Eigen werk of samenwerking?</span></dd></div>
-              </dl>
-              <button class="case-open link-arrow" type="button" data-case="03" aria-haspopup="dialog">Bekijk case 03</button>
-            </div>
-          </article>
-        </div>
-      </div>
+    <section class="work" id="werk" aria-labelledby="werk-h">
+      <h2 id="werk-h" class="section-title">Werk</h2>
+      <!-- Projecten: vervang .tile-media door <img> zodra beelden binnen zijn. -->
+      <ul class="tiles">
+        <li class="tile tile-a">
+          <div class="tile-media" aria-hidden="true"><span class="tile-no">01</span></div>
+          <p class="tile-cap">Merk &amp; design</p>
+        </li>
+        <li class="tile tile-b">
+          <div class="tile-media" aria-hidden="true"><span class="tile-no">02</span></div>
+          <p class="tile-cap">Content &amp; campagnes</p>
+        </li>
+        <li class="tile tile-c">
+          <div class="tile-media" aria-hidden="true"><span class="tile-no">03</span></div>
+          <p class="tile-cap">Web &amp; digitaal</p>
+        </li>
+      </ul>
     </section>
 
-    <!-- 03 DIENSTEN -->
-    <section class="services" id="diensten" aria-labelledby="diensten-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">02 / Diensten</p>
-          <h2 id="diensten-title">Wat we maken.</h2>
-        </div>
-        <ol class="service-list">
-          <li class="service" data-reveal>
-            <span class="service-num" aria-hidden="true">01</span>
-            <h3 class="service-name">Merk &amp; design</h3>
-            <p class="service-text">Een herkenbare identiteit en de grafische uitwerking ervan, zodat je merk er op elke drager hetzelfde uitziet.</p>
-            <a class="service-link link-arrow" href="#case-01">Zie case 01</a>
-          </li>
-          <li class="service" data-reveal>
-            <span class="service-num" aria-hidden="true">02</span>
-            <h3 class="service-name">Content &amp; campagnes</h3>
-            <p class="service-text">Foto, video en socialcontent rond één duidelijke boodschap — voor een losse campagne of een vaste reeks.</p>
-            <a class="service-link link-arrow" href="#case-02">Zie case 02</a>
-          </li>
-          <li class="service" data-reveal>
-            <span class="service-num" aria-hidden="true">03</span>
-            <h3 class="service-name">Web &amp; digitaal</h3>
-            <p class="service-text">Een website die laat zien wie je bent en wat je doet, overzichtelijk op telefoon en desktop.</p>
-            <a class="service-link link-arrow" href="#case-03">Zie case 03</a>
-          </li>
-        </ol>
-        <p class="status-note">Voorstel — labels en concrete deliverables nog door Panda te bevestigen.</p>
-      </div>
+    <section class="services" id="diensten" aria-labelledby="diensten-h">
+      <h2 id="diensten-h" class="section-title">Diensten</h2>
+      <ul class="svc">
+        <li><span class="svc-name">Merk &amp; design<svg class="brush svc-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span><span class="svc-tags">Strategie · Identiteit</span></li>
+        <li><span class="svc-name">Content<svg class="brush svc-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span><span class="svc-tags">Social · Foto · Video</span></li>
+        <li><span class="svc-name">Web<svg class="brush svc-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span><span class="svc-tags">Websites · Software</span></li>
+      </ul>
     </section>
 
-    <!-- 04 STUDIO (typografisch: geen studiofoto beschikbaar) -->
-    <section class="studio" id="studio" aria-labelledby="studio-title">
-      <div class="wrap studio-grid">
-        <p class="eyebrow">03 / Studio</p>
-        <h2 id="studio-title" class="studio-title">Klein team. <span class="nowrap">Kort lijntje.</span></h2>
-        <div class="studio-copy" data-reveal>
-          <p>Panda werkt vanuit Paramaribo voor ondernemers en organisaties die hun verhaal helder willen neerzetten. Je spreekt direct met de mensen die het werk maken. We stellen eerst vragen, laten keuzes zien in plaats van alleen eindbestanden, en leveren werk op dat je zelf verder kunt gebruiken.</p>
-          <p class="status-note status-note--light">Voorstel — tekst en teamomvang door Panda te bevestigen. Een echte studiofoto kan hier later bij.</p>
-        </div>
-      </div>
+    <section class="studio" id="studio" aria-labelledby="studio-h">
+      <h2 id="studio-h" class="visually-hidden">Studio</h2>
+      <p class="studio-line">Kleine studio.<br>Korte lijnen.<br>Eigen handschrift.</p>
     </section>
 
-    <!-- 05 WERKWIJZE -->
-    <section class="process" aria-labelledby="werkwijze-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">04 / Werkwijze</p>
-          <h2 id="werkwijze-title">Van eerste gesprek <span class="nowrap">tot oplevering.</span></h2>
-        </div>
-        <ol class="steps">
-          <li data-reveal><span class="step-num" aria-hidden="true">01</span><h3>Kennismaken</h3><p>Je vertelt wat er speelt. Wij vragen door naar doel, publiek en wat er al is.</p></li>
-          <li data-reveal><span class="step-num" aria-hidden="true">02</span><h3>Richting bepalen</h3><p>We laten een eerste richting zien en kiezen samen wat het sterkst werkt.</p></li>
-          <li data-reveal><span class="step-num" aria-hidden="true">03</span><h3>Maken &amp; aanscherpen</h3><p>We werken de richting uit. Jij geeft feedback op afgesproken momenten.</p></li>
-          <li data-reveal><span class="step-num" aria-hidden="true">04</span><h3>Opleveren</h3><p>Je krijgt de bestanden in de formaten die je nodig hebt, met uitleg over het gebruik.</p></li>
-        </ol>
-        <p class="status-note">Voorstel — alleen publiceren als Panda bevestigt dat dit de werkwijze is.</p>
-      </div>
-    </section>
-
-    <!-- 06 CONTACT -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <svg class="ink ink-broad contact-ink" aria-hidden="true" focusable="false"><use href="#stroke-broad"/></svg>
-      <div class="wrap contact-grid">
-        <p class="eyebrow">05 / Contact</p>
-        <h2 id="contact-title" class="contact-title">Heb je een project? Begin met een gesprek.</h2>
-        <div class="contact-channels">
-          <!-- Geen live link: het zakelijke nummer is onbevestigd (S2 noemt twee verschillende nummers). -->
-          <div class="channel channel-pending">
-            <span class="channel-kind">WhatsApp</span>
-            <span class="channel-value">Nummer wacht op bevestiging</span>
-          </div>
-          <dl class="contact-facts">
-            <div><dt>Locatie</dt><dd>Paramaribo, Suriname</dd></div>
-            <div><dt>Profiel</dt><dd><a href="https://www.linkedin.com/company/panda-design-agency-suriname" rel="noopener">LinkedIn <span class="visually-hidden">(opent LinkedIn)</span></a> <span class="todo todo--dark">te bevestigen</span></dd></div>
-          </dl>
-        </div>
-      </div>
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <svg class="brush contact-brush" aria-hidden="true" focusable="false"><use href="#stroke"/></svg>
+      <h2 id="contact-h" class="contact-title">Heb je<br>een project?</h2>
+      <ul class="contact-links">
+        <li><a href="https://www.facebook.com/PandaGraphics.su/" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/company/panda-design-agency-suriname" rel="noopener">LinkedIn</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>Panda <span class="muted">(werknaam)</span> · Paramaribo</p>
-      <p class="muted">Conceptversie — november 2026</p>
-    </div>
+  <footer class="foot">
+    <span>Panda Design Agency</span>
+    <span>Paramaribo, Suriname</span>
   </footer>
-
-  <!-- CASE-DIALOGEN -->
-  <dialog class="case-dialog" id="case-01-detail" aria-labelledby="case-01-dtitle">
-    <div class="dialog-inner">
-      <button class="dialog-close" type="button" data-close>Sluiten <span aria-hidden="true">×</span></button>
-      <p class="eyebrow">Case 01 · Merk &amp; design</p>
-      <h2 id="case-01-dtitle"><span class="todo">Projectnaam te bevestigen</span></h2>
-      <figure class="slot" style="--ratio: 16 / 9"><span class="slot-label">Hoofdbeeld</span><span class="slot-need">Origineel, ≥ 2400 px breed</span></figure>
-      <div class="dialog-cols">
-        <dl class="case-facts">
-          <div><dt>Opdracht</dt><dd><span class="todo">Wat vroeg de klant?</span></dd></div>
-          <div><dt>Aanpak</dt><dd><span class="todo">Hoe pakte Panda het aan?</span></dd></div>
-          <div><dt>Rol Panda</dt><dd><span class="todo">Exacte bijdrage</span></dd></div>
-          <div><dt>Credits</dt><dd><span class="todo">Partners, fotograaf</span></dd></div>
-        </dl>
-        <div class="dialog-details">
-          <figure class="slot" style="--ratio: 1 / 1"><span class="slot-label">Detail 1</span></figure>
-          <figure class="slot" style="--ratio: 1 / 1"><span class="slot-label">Detail 2</span></figure>
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog class="case-dialog" id="case-02-detail" aria-labelledby="case-02-dtitle">
-    <div class="dialog-inner">
-      <button class="dialog-close" type="button" data-close>Sluiten <span aria-hidden="true">×</span></button>
-      <p class="eyebrow">Case 02 · Content &amp; campagnes</p>
-      <h2 id="case-02-dtitle"><span class="todo">Projectnaam te bevestigen</span></h2>
-      <figure class="slot" style="--ratio: 16 / 9"><span class="slot-label">Hoofdbeeld of poster van video</span><span class="slot-need">Video optioneel, met poster en pauzeknop</span></figure>
-      <div class="dialog-cols">
-        <dl class="case-facts">
-          <div><dt>Opdracht</dt><dd><span class="todo">Wat vroeg de klant?</span></dd></div>
-          <div><dt>Aanpak</dt><dd><span class="todo">Hoe pakte Panda het aan?</span></dd></div>
-          <div><dt>Rol Panda</dt><dd><span class="todo">Exacte bijdrage</span></dd></div>
-          <div><dt>Credits</dt><dd><span class="todo">Partners, fotograaf</span></dd></div>
-        </dl>
-        <div class="dialog-details">
-          <figure class="slot" style="--ratio: 4 / 5"><span class="slot-label">Detail 1</span></figure>
-          <figure class="slot" style="--ratio: 4 / 5"><span class="slot-label">Detail 2</span></figure>
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <dialog class="case-dialog" id="case-03-detail" aria-labelledby="case-03-dtitle">
-    <div class="dialog-inner">
-      <button class="dialog-close" type="button" data-close>Sluiten <span aria-hidden="true">×</span></button>
-      <p class="eyebrow">Case 03 · Web &amp; digitaal</p>
-      <h2 id="case-03-dtitle"><span class="todo">Projectnaam te bevestigen</span></h2>
-      <figure class="slot" style="--ratio: 16 / 9"><span class="slot-label">Hoofdbeeld</span><span class="slot-need">Screenshot of website op apparaat</span></figure>
-      <div class="dialog-cols">
-        <dl class="case-facts">
-          <div><dt>Opdracht</dt><dd><span class="todo">Wat vroeg de klant?</span></dd></div>
-          <div><dt>Aanpak</dt><dd><span class="todo">Hoe pakte Panda het aan?</span></dd></div>
-          <div><dt>Rol Panda</dt><dd><span class="todo">Eigen werk, samenwerking of doorverwezen?</span></dd></div>
-          <div><dt>Credits</dt><dd><span class="todo">Partners</span></dd></div>
-        </dl>
-        <div class="dialog-details">
-          <figure class="slot" style="--ratio: 9 / 16"><span class="slot-label">Mobiel</span></figure>
-          <figure class="slot" style="--ratio: 9 / 16"><span class="slot-label">Detail</span></figure>
-        </div>
-      </div>
-    </div>
-  </dialog>
 </body>
 </html>
