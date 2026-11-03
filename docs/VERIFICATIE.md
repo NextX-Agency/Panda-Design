@@ -23,3 +23,11 @@
 - Safari / Firefox en echte mobiele toestellen.
 - Performance-metingen (geen echte media aanwezig).
 - Contactroute: er is nog geen bevestigd kanaal, dus niets om te testen.
+
+## Deployment — 3 november 2026 (redesign, commit 055a7ed)
+
+- Vercel-project `panda-design` (account agencynextx), root directory `site`, geen framework/build.
+- Eerste deployment van een nieuw project: Vercel zette deze als **production** op `https://panda-design-eta.vercel.app`. Geen eerdere site overschreven.
+- Live gecontroleerd via de Vercel-connector: HTML, CSS, JS en favicon geven 200 over HTTPS (HSTS), inhoud gelijk aan de lokaal geteste versie, `X-Robots-Tag: noindex, nofollow` actief.
+- Niet gedaan: de live URL in een browser renderen (sandbox blokkeert vercel.app). Browsertests zijn lokaal op dezelfde bestanden uitgevoerd.
+- Nog bewust: noindex aan, geen canonical, geen logo of portfoliobeelden.
