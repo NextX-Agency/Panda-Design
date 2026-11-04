@@ -2,24 +2,27 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panda Design Agency — Paramaribo</title>
-  <meta name="description" content="Panda Design Agency: merk, content en web uit Paramaribo.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Panda Design Agency — Design studio, Paramaribo</title>
+  <meta name="description" content="Panda is een design studio uit Paramaribo voor branding, graphic design, content en advertising.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Panda Design Agency">
+  <meta property="og:description" content="Design studio uit Paramaribo. Branding, graphic design, content en advertising.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.add("js")</script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+  <!-- ============ Brush library (decoratief, origineel) ============ -->
   <svg class="defs" aria-hidden="true" focusable="false" width="0" height="0">
     <defs>
-      <!-- Droge penseelstreek: vaste kern, rafelige borstelranden. -->
-      <filter id="dry" x="-5%" y="-30%" width="110%" height="160%" color-interpolation-filters="sRGB">
+      <filter id="dry" x="-6%" y="-30%" width="112%" height="160%" color-interpolation-filters="sRGB">
         <feGaussianBlur in="SourceAlpha" stdDeviation="3 10" result="soft"/>
         <feTurbulence type="fractalNoise" baseFrequency="0.0025 0.11" numOctaves="4" seed="11" result="noise"/>
         <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="n"/>
@@ -28,94 +31,337 @@
         <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="grain"/>
         <feDisplacementMap in="ink" in2="grain" scale="6" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
-      <filter id="dry-sm" x="-5%" y="-40%" width="110%" height="180%" color-interpolation-filters="sRGB">
+      <filter id="dry-sm" x="-6%" y="-40%" width="112%" height="180%" color-interpolation-filters="sRGB">
         <feGaussianBlur in="SourceAlpha" stdDeviation="1.5 2.5" result="soft"/>
         <feTurbulence type="fractalNoise" baseFrequency="0.005 0.3" numOctaves="3" seed="23" result="noise"/>
         <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="n"/>
         <feComposite in="soft" in2="n" operator="arithmetic" k2="6" k3="-6" k4="-1.3" result="bristles"/>
         <feComposite in="SourceGraphic" in2="bristles" operator="in"/>
       </filter>
+      <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="8" result="g"/>
+        <feDisplacementMap in="SourceGraphic" in2="g" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
       <linearGradient id="fade-g" x1="0" x2="1" y1="0" y2="0">
         <stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#fff"/><stop offset="1" stop-color="#777"/>
       </linearGradient>
       <mask id="fade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#fade-g)"/></mask>
+
       <symbol id="stroke" viewBox="0 0 1200 200" preserveAspectRatio="none">
         <path mask="url(#fade)" d="M34 112C18 74 58 44 124 48 360 36 640 54 900 60c122 3 214 14 282 34-60 14-162 30-282 42-262 18-520 14-770 16-58 1-92-12-96-40Z"/>
-        <path mask="url(#fade)" d="M940 70c90 4 170 14 236 28-70 4-160 0-236-6Z" opacity=".7"/>
       </symbol>
       <symbol id="flick" viewBox="0 0 600 64" preserveAspectRatio="none">
         <path mask="url(#fade)" d="M10 36C110 18 340 10 592 20c-100 14-330 26-578 30-10-1-12-8-4-14Z"/>
+      </symbol>
+      <symbol id="dab" viewBox="0 0 300 260">
+        <path d="M60 70C100 20 210 18 252 66c40 46 30 120-18 154-50 36-140 36-182-6C14 176 22 116 60 70Z"/>
+      </symbol>
+      <symbol id="arc" viewBox="0 0 600 600">
+        <path mask="url(#fade)" d="M96 420C52 260 168 92 336 84c132-6 228 72 248 172-48-58-126-104-226-100-150 6-252 130-214 290 8 34-40 44-48-26Z"/>
       </symbol>
     </defs>
   </svg>
 
   <a class="skip" href="#main">Naar de inhoud</a>
 
-  <header class="top">
-    <a class="logo" href="#main" aria-label="Panda Design Agency, naar boven">PANDA</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav id="nav" aria-label="Hoofdmenu">
-      <a href="#werk">Werk</a>
-      <a href="#diensten">Diensten</a>
-      <a href="#studio">Studio</a>
-      <a href="#contact">Contact</a>
+  <!-- ============ Header ============ -->
+  <header class="top" data-top>
+    <a class="logo" href="#top" aria-label="Panda Design Agency, naar boven">
+      <span class="logo-word">PANDA</span><span class="logo-dot" aria-hidden="true"></span>
+    </a>
+    <p class="top-clock"><span>Paramaribo</span> <time data-clock>--:--</time></p>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
+    <nav id="nav" class="nav" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#werk"><span class="nav-no" aria-hidden="true">01</span>Werk</a></li>
+        <li><a href="#diensten"><span class="nav-no" aria-hidden="true">02</span>Diensten</a></li>
+        <li><a href="#aanpak"><span class="nav-no" aria-hidden="true">03</span>Aanpak</a></li>
+        <li><a href="#studio"><span class="nav-no" aria-hidden="true">04</span>Studio</a></li>
+        <li class="nav-cta-li"><a class="nav-cta" href="#contact">Start een project</a></li>
+      </ul>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" aria-label="Introductie">
-      <svg class="brush hero-brush" aria-hidden="true" focusable="false"><use href="#stroke"/></svg>
-      <h1 class="hero-title">Werk dat<br>blijft hangen.</h1>
-      <p class="hero-sub">Design studio · Paramaribo</p>
-      <a class="hero-cta" href="#werk">Bekijk werk <span aria-hidden="true">↓</span></a>
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-brush-wrap" aria-hidden="true">
+        <svg class="brush hero-brush" focusable="false"><use href="#stroke"/></svg>
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="line"><span>Werk dat</span></span>
+        <span class="line"><span>blijft <em>hangen.</em></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-tags">Branding<span aria-hidden="true">/</span>Graphic&nbsp;design<span aria-hidden="true">/</span>Content<span aria-hidden="true">/</span>Advertising</p>
+        <p class="hero-place">Design studio<br>Paramaribo, Suriname</p>
+        <a class="hero-scroll" href="#intro"><span>Scroll</span><span class="hero-scroll-line" aria-hidden="true"></span></a>
+      </div>
     </section>
 
+    <!-- ============ Intro statement ============ -->
+    <section class="intro" id="intro" aria-label="Over Panda">
+      <p class="intro-text">
+        Panda is een design studio uit Paramaribo. We geven merken een
+        <span class="hl">eigen gezicht<svg class="brush hl-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span>
+        — van logo en campagne tot feed en website. Geen sjablonen, maar werk met een
+        <span class="hl">eigen hand.<svg class="brush hl-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span>
+      </p>
+      <dl class="facts">
+        <div><dt>Projecten</dt><dd>50+</dd></div>
+        <div><dt>Actief sinds</dt><dd>2022</dd></div>
+        <div><dt>Basis</dt><dd>PBO</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ Work ============ -->
     <section class="work" id="werk" aria-labelledby="werk-h">
-      <h2 id="werk-h" class="section-title">Werk</h2>
-      <!-- Projecten: vervang .tile-media door <img> zodra beelden binnen zijn. -->
-      <ul class="tiles">
-        <li class="tile tile-a">
-          <div class="tile-media" aria-hidden="true"><span class="tile-no">01</span></div>
-          <p class="tile-cap">Merk &amp; design</p>
+      <div class="sec-head">
+        <h2 id="werk-h" class="sec-title">Geselecteerd <em>werk</em></h2>
+        <p class="sec-count" aria-hidden="true">(06)</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter op discipline">
+        <button type="button" class="chip" aria-pressed="true" data-filter="all">Alles</button>
+        <button type="button" class="chip" aria-pressed="false" data-filter="branding">Branding</button>
+        <button type="button" class="chip" aria-pressed="false" data-filter="design">Graphic design</button>
+        <button type="button" class="chip" aria-pressed="false" data-filter="content">Content</button>
+        <button type="button" class="chip" aria-pressed="false" data-filter="advertising">Advertising</button>
+      </div>
+
+      <!-- Covers: decoratieve penseelcomposities tot echte projectbeelden binnen zijn.
+           Echt beeld: vervang <svg class="cover-art"> door <img src="..." alt="..." width height loading="lazy">. -->
+      <ul class="grid" data-grid>
+        <li class="tile t1" data-tags="branding design">
+          <a class="tile-link" href="#case-01">
+            <div class="cover cover-black">
+              <svg class="cover-art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <use href="#stroke" class="ink-white" x="-80" y="180" width="1000" height="220" transform="rotate(-14 400 300)"/>
+                <use href="#dab" class="ink-blue" x="560" y="70" width="150" height="130"/>
+              </svg>
+              <span class="cover-no">01</span>
+            </div>
+            <div class="tile-meta"><h3 class="tile-title">Case 01</h3><p class="tile-tags">Branding · Graphic design</p></div>
+          </a>
         </li>
-        <li class="tile tile-b">
-          <div class="tile-media" aria-hidden="true"><span class="tile-no">02</span></div>
-          <p class="tile-cap">Content &amp; campagnes</p>
+        <li class="tile t2" data-tags="content">
+          <a class="tile-link" href="#case-02">
+            <div class="cover cover-blue">
+              <svg class="cover-art" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <use href="#arc" class="ink-white" x="40" y="120" width="520" height="520"/>
+                <use href="#flick" class="ink-black" x="60" y="600" width="420" height="50" transform="rotate(-6 270 625)"/>
+              </svg>
+              <span class="cover-no">02</span>
+            </div>
+            <div class="tile-meta"><h3 class="tile-title">Case 02</h3><p class="tile-tags">Content</p></div>
+          </a>
         </li>
-        <li class="tile tile-c">
-          <div class="tile-media" aria-hidden="true"><span class="tile-no">03</span></div>
-          <p class="tile-cap">Web &amp; digitaal</p>
+        <li class="tile t3" data-tags="advertising">
+          <a class="tile-link" href="#case-03">
+            <div class="cover cover-white">
+              <svg class="cover-art" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <use href="#stroke" class="ink-black" x="120" y="-40" width="560" height="200" transform="rotate(90 300 300)"/>
+                <use href="#dab" class="ink-blue" x="330" y="360" width="160" height="140"/>
+              </svg>
+              <span class="cover-no">03</span>
+            </div>
+            <div class="tile-meta"><h3 class="tile-title">Case 03</h3><p class="tile-tags">Advertising</p></div>
+          </a>
+        </li>
+        <li class="tile t4" data-tags="branding">
+          <a class="tile-link" href="#case-04">
+            <div class="cover cover-black">
+              <svg class="cover-art" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <use href="#stroke" class="ink-blue" x="-60" y="230" width="1100" height="230" transform="rotate(6 480 300)"/>
+                <use href="#flick" class="ink-white" x="470" y="110" width="440" height="70" transform="rotate(-8 690 145)"/>
+              </svg>
+              <span class="cover-no">04</span>
+            </div>
+            <div class="tile-meta"><h3 class="tile-title">Case 04</h3><p class="tile-tags">Branding</p></div>
+          </a>
+        </li>
+        <li class="tile t5" data-tags="design content">
+          <a class="tile-link" href="#case-05">
+            <div class="cover cover-white">
+              <svg class="cover-art" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <use href="#arc" class="ink-blue" x="30" y="90" width="540" height="540" transform="rotate(180 300 360)"/>
+                <use href="#dab" class="ink-black" x="210" y="300" width="170" height="150"/>
+              </svg>
+              <span class="cover-no">05</span>
+            </div>
+            <div class="tile-meta"><h3 class="tile-title">Case 05</h3><p class="tile-tags">Graphic design · Content</p></div>
+          </a>
+        </li>
+        <li class="tile t6" data-tags="advertising content">
+          <a class="tile-link" href="#case-06">
+            <div class="cover cover-blue">
+              <svg class="cover-art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <use href="#stroke" class="ink-black" x="-40" y="120" width="900" height="200" transform="rotate(-4 400 220)"/>
+                <use href="#stroke" class="ink-white" x="80" y="330" width="760" height="160" transform="rotate(3 460 410)"/>
+              </svg>
+              <span class="cover-no">06</span>
+            </div>
+            <div class="tile-meta"><h3 class="tile-title">Case 06</h3><p class="tile-tags">Advertising · Content</p></div>
+          </a>
         </li>
       </ul>
+
+      <!-- Case-inhoud. Met JS opent dit in een dialoog; zonder JS staat het hier leesbaar. -->
+      <div class="cases-store">
+        <article class="case" id="case-01" data-case="01">
+          <p class="case-kicker">Case 01</p>
+          <h3 class="case-title">Projectnaam</h3>
+          <dl class="case-meta"><div><dt>Klant</dt><dd>—</dd></div><div><dt>Jaar</dt><dd>—</dd></div><div><dt>Discipline</dt><dd>Branding, Graphic design</dd></div><div><dt>Rol Panda</dt><dd>—</dd></div></dl>
+          <p class="case-lead">Hier komt in twee of drie zinnen de vraag van de klant en wat Panda maakte.</p>
+        </article>
+        <article class="case" id="case-02" data-case="02">
+          <p class="case-kicker">Case 02</p>
+          <h3 class="case-title">Projectnaam</h3>
+          <dl class="case-meta"><div><dt>Klant</dt><dd>—</dd></div><div><dt>Jaar</dt><dd>—</dd></div><div><dt>Discipline</dt><dd>Content</dd></div><div><dt>Rol Panda</dt><dd>—</dd></div></dl>
+          <p class="case-lead">Hier komt in twee of drie zinnen de vraag van de klant en wat Panda maakte.</p>
+        </article>
+        <article class="case" id="case-03" data-case="03">
+          <p class="case-kicker">Case 03</p>
+          <h3 class="case-title">Projectnaam</h3>
+          <dl class="case-meta"><div><dt>Klant</dt><dd>—</dd></div><div><dt>Jaar</dt><dd>—</dd></div><div><dt>Discipline</dt><dd>Advertising</dd></div><div><dt>Rol Panda</dt><dd>—</dd></div></dl>
+          <p class="case-lead">Hier komt in twee of drie zinnen de vraag van de klant en wat Panda maakte.</p>
+        </article>
+        <article class="case" id="case-04" data-case="04">
+          <p class="case-kicker">Case 04</p>
+          <h3 class="case-title">Projectnaam</h3>
+          <dl class="case-meta"><div><dt>Klant</dt><dd>—</dd></div><div><dt>Jaar</dt><dd>—</dd></div><div><dt>Discipline</dt><dd>Branding</dd></div><div><dt>Rol Panda</dt><dd>—</dd></div></dl>
+          <p class="case-lead">Hier komt in twee of drie zinnen de vraag van de klant en wat Panda maakte.</p>
+        </article>
+        <article class="case" id="case-05" data-case="05">
+          <p class="case-kicker">Case 05</p>
+          <h3 class="case-title">Projectnaam</h3>
+          <dl class="case-meta"><div><dt>Klant</dt><dd>—</dd></div><div><dt>Jaar</dt><dd>—</dd></div><div><dt>Discipline</dt><dd>Graphic design, Content</dd></div><div><dt>Rol Panda</dt><dd>—</dd></div></dl>
+          <p class="case-lead">Hier komt in twee of drie zinnen de vraag van de klant en wat Panda maakte.</p>
+        </article>
+        <article class="case" id="case-06" data-case="06">
+          <p class="case-kicker">Case 06</p>
+          <h3 class="case-title">Projectnaam</h3>
+          <dl class="case-meta"><div><dt>Klant</dt><dd>—</dd></div><div><dt>Jaar</dt><dd>—</dd></div><div><dt>Discipline</dt><dd>Advertising, Content</dd></div><div><dt>Rol Panda</dt><dd>—</dd></div></dl>
+          <p class="case-lead">Hier komt in twee of drie zinnen de vraag van de klant en wat Panda maakte.</p>
+        </article>
+      </div>
     </section>
 
+    <!-- ============ Services ============ -->
     <section class="services" id="diensten" aria-labelledby="diensten-h">
-      <h2 id="diensten-h" class="section-title">Diensten</h2>
-      <ul class="svc">
-        <li><span class="svc-name">Merk &amp; design<svg class="brush svc-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span><span class="svc-tags">Strategie · Identiteit</span></li>
-        <li><span class="svc-name">Content<svg class="brush svc-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span><span class="svc-tags">Social · Foto · Video</span></li>
-        <li><span class="svc-name">Web<svg class="brush svc-mark" aria-hidden="true" focusable="false"><use href="#flick"/></svg></span><span class="svc-tags">Websites · Software</span></li>
+      <div class="sec-head">
+        <h2 id="diensten-h" class="sec-title">Wat we <em>maken</em></h2>
+        <p class="sec-count" aria-hidden="true">(05)</p>
+      </div>
+      <div class="svc">
+        <details class="svc-item" name="svc">
+          <summary><span class="svc-no">01</span><span class="svc-name">Branding</span><span class="svc-plus" aria-hidden="true"></span></summary>
+          <div class="svc-body"><p>Een merk dat je herkent voordat je de naam leest.</p><ul><li>Logo</li><li>Huisstijl</li><li>Merkgids</li><li>Verpakking</li></ul></div>
+        </details>
+        <details class="svc-item" name="svc">
+          <summary><span class="svc-no">02</span><span class="svc-name">Graphic design</span><span class="svc-plus" aria-hidden="true"></span></summary>
+          <div class="svc-body"><p>Alles wat gedrukt, gedeeld of opgehangen wordt.</p><ul><li>Social posts</li><li>Drukwerk</li><li>Flyers &amp; posters</li><li>Signing</li></ul></div>
+        </details>
+        <details class="svc-item" name="svc">
+          <summary><span class="svc-no">03</span><span class="svc-name">Content</span><span class="svc-plus" aria-hidden="true"></span></summary>
+          <div class="svc-body"><p>Beeld en video die je feed laten leven.</p><ul><li>Fotografie</li><li>Video</li><li>Reels</li><li>Contentplanning</li></ul></div>
+        </details>
+        <details class="svc-item" name="svc">
+          <summary><span class="svc-no">04</span><span class="svc-name">Advertising</span><span class="svc-plus" aria-hidden="true"></span></summary>
+          <div class="svc-body"><p>Campagnes die de juiste mensen bereiken.</p><ul><li>Campagne-concept</li><li>Social ads</li><li>Strategie</li></ul></div>
+        </details>
+        <details class="svc-item" name="svc">
+          <summary><span class="svc-no">05</span><span class="svc-name">Web</span><span class="svc-plus" aria-hidden="true"></span></summary>
+          <div class="svc-body"><p>Een website die je merk online net zo sterk neerzet.</p><ul><li>Websites</li><li>Landingspagina's</li></ul></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ Approach ============ -->
+    <section class="approach" id="aanpak" aria-labelledby="aanpak-h">
+      <div class="sec-head">
+        <h2 id="aanpak-h" class="sec-title">Hoe we <em>werken</em></h2>
+        <p class="sec-count" aria-hidden="true">(04)</p>
+      </div>
+      <svg class="brush approach-brush" aria-hidden="true" focusable="false"><use href="#stroke"/></svg>
+      <ol class="steps">
+        <li><span class="step-no">01</span><h3>Luisteren</h3><p>Wat wil je bereiken, en bij wie?</p></li>
+        <li><span class="step-no">02</span><h3>Richting</h3><p>Eén heldere visuele koers, samen gekozen.</p></li>
+        <li><span class="step-no">03</span><h3>Maken</h3><p>Uitwerken, testen, aanscherpen.</p></li>
+        <li><span class="step-no">04</span><h3>Lanceren</h3><p>Klaar voor gebruik, overal waar je merk staat.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ Studio ============ -->
+    <section class="studio" id="studio" aria-labelledby="studio-h">
+      <h2 id="studio-h" class="studio-title">Klein genoeg om je te <em>kennen.</em> Scherp genoeg om op te <em>vallen.</em></h2>
+      <ul class="values">
+        <li><h3>Direct contact</h3><p>Je praat met de mensen die het werk maken.</p></li>
+        <li><h3>Eigen handschrift</h3><p>Elk merk krijgt zijn eigen vorm.</p></li>
+        <li><h3>Van hier</h3><p>Gemaakt in Paramaribo, voor Suriname en verder.</p></li>
       </ul>
     </section>
 
-    <section class="studio" id="studio" aria-labelledby="studio-h">
-      <h2 id="studio-h" class="visually-hidden">Studio</h2>
-      <p class="studio-line">Kleine studio.<br>Korte lijnen.<br>Eigen handschrift.</p>
-    </section>
-
+    <!-- ============ Contact ============ -->
     <section class="contact" id="contact" aria-labelledby="contact-h">
       <svg class="brush contact-brush" aria-hidden="true" focusable="false"><use href="#stroke"/></svg>
-      <h2 id="contact-h" class="contact-title">Heb je<br>een project?</h2>
-      <ul class="contact-links">
+      <p class="contact-kicker">Nieuw project?</p>
+      <h2 id="contact-h" class="contact-title">Laten we iets <em>moois</em> maken.</h2>
+      <div class="mail">
+        <a class="mail-link" href="mailto:pandasuriname@gmail.com">pandasuriname@gmail.com</a>
+        <button class="mail-copy" type="button" data-copy="pandasuriname@gmail.com">Kopieer</button>
+        <span class="mail-status" role="status" aria-live="polite"></span>
+      </div>
+      <ul class="socials">
+        <li><a href="https://www.instagram.com/pandadesign.sr/" rel="noopener">Instagram</a></li>
         <li><a href="https://www.facebook.com/PandaGraphics.su/" rel="noopener">Facebook</a></li>
         <li><a href="https://www.linkedin.com/company/panda-design-agency-suriname" rel="noopener">LinkedIn</a></li>
       </ul>
     </section>
   </main>
 
+  <!-- ============ Footer ============ -->
   <footer class="foot">
-    <span>Panda Design Agency</span>
-    <span>Paramaribo, Suriname</span>
+    <div class="foot-cols">
+      <div>
+        <p class="foot-h">Studio</p>
+        <p>Panda Design Agency<br>Paramaribo, Suriname</p>
+      </div>
+      <div>
+        <p class="foot-h">Menu</p>
+        <ul><li><a href="#werk">Werk</a></li><li><a href="#diensten">Diensten</a></li><li><a href="#aanpak">Aanpak</a></li><li><a href="#studio">Studio</a></li></ul>
+      </div>
+      <div>
+        <p class="foot-h">Volg</p>
+        <ul><li><a href="https://www.instagram.com/pandadesign.sr/" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/PandaGraphics.su/" rel="noopener">Facebook</a></li><li><a href="https://www.linkedin.com/company/panda-design-agency-suriname" rel="noopener">LinkedIn</a></li></ul>
+      </div>
+      <div>
+        <p class="foot-h">Lokale tijd</p>
+        <p><time data-clock>--:--</time> SRT</p>
+        <a class="foot-top" href="#top">Terug naar boven <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+    <div class="foot-mark" aria-hidden="true">
+      <svg class="brush foot-brush" focusable="false"><use href="#stroke"/></svg>
+      <span>PANDA</span>
+    </div>
+    <p class="foot-legal">© <span data-year>2026</span> Panda Design Agency</p>
   </footer>
+
+  <!-- ============ Case dialog ============ -->
+  <dialog class="case-dialog" aria-labelledby="dlg-title">
+    <div class="dlg">
+      <div class="dlg-bar">
+        <p class="dlg-count" data-dlg-count>01 / 06</p>
+        <button type="button" class="dlg-close" data-dlg-close>Sluiten <span aria-hidden="true">✕</span></button>
+      </div>
+      <div class="dlg-cover" data-dlg-cover></div>
+      <div class="dlg-body" data-dlg-body></div>
+      <div class="dlg-nav">
+        <button type="button" class="dlg-step" data-dlg-prev><span aria-hidden="true">←</span> Vorige</button>
+        <button type="button" class="dlg-step" data-dlg-next>Volgende <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>

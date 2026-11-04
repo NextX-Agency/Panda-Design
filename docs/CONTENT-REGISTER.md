@@ -1,37 +1,35 @@
-# Content- en assetregister
+# Content register — wat staat er en wat moet Panda bevestigen
 
-Alle publiceerbare content moet hier op BEVESTIGD staan vóór productie.
+Laatste update: 4 november 2026 (volledige build).
 
-## Tekst
+## Op de site, te bevestigen door Panda
 
-| Element | Tekst (kort) | Bron | Status |
+| Element | Op de site | Bron | Status |
 |---|---|---|---|
-| Naam | "Panda" | S1 werknaam | VOORLOPIG |
-| Locatie | Paramaribo, Suriname | S1 zelfbeschrijving | VOORLOPIG |
-| Hero-kop | "Werk dat blijft hangen." | Ontwerpvoorstel | VOORSTEL |
-| Hero-subtekst | "Panda helpt merken zichtbaar en herkenbaar te worden…" | Audit p.3, samenvatting S1 | VOORSTEL |
-| Diensten (3) | Merk & design / Content & campagnes / Web & digitaal | Audit p.3 o.b.v. S1 | VOORSTEL |
-| Studio-tekst | "Panda werkt vanuit Paramaribo…" (~50 woorden) | Ontwerpvoorstel | VOORSTEL |
-| Werkwijze (4 stappen) | Kennismaken → Opleveren | Brief | VOORSTEL |
-| Contactkop | "Heb je een project? Begin met een gesprek." | Ontwerpvoorstel | VOORSTEL |
-| LinkedIn-link | linkedin.com/company/panda-design-agency-suriname | S1 | VOORLOPIG |
-| WhatsApp | geen nummer gekoppeld | S2-conflict | ONTBREEKT |
+| Naam | Panda Design Agency / "PANDA" | Facebook-paginanaam, LinkedIn-slug | VOORLOPIG |
+| Kleuren | #000000, #FFFFFF, #00249C | Opdrachtgever | BEVESTIGD |
+| Hero | "Werk dat blijft hangen." | Ontwerpvoorstel | VOORSTEL |
+| Disciplines | Branding, Graphic design, Content, Advertising | Instagram-bio @pandadesign.sr (via zoekresultaat) | VOORLOPIG |
+| Dienst "Web" | Websites, landingspagina's | LinkedIn-aanbod (S1) | VOORLOPIG |
+| Deliverables per dienst | Logo, huisstijl, merkgids, … | Ontwerpvoorstel | TE BEVESTIGEN |
+| Feit "50+ projecten" | 50+ | Instagram-bio (zelf gemeld) | TE BEVESTIGEN |
+| Feit "Actief sinds 2022" | 2022 | LinkedIn (zelf gemeld) | TE BEVESTIGEN |
+| Werkwijze (4 stappen) | Luisteren → Lanceren | Ontwerpvoorstel | TE BEVESTIGEN |
+| Studio-tekst en 3 waarden | "Klein genoeg om je te kennen…" | Ontwerpvoorstel | VOORSTEL |
+| E-mail | pandasuriname@gmail.com | Facebook-pagina (via zoekresultaat) | TE BEVESTIGEN |
+| Instagram | instagram.com/pandadesign.sr | Zoekresultaat | VOORLOPIG |
+| Facebook | facebook.com/PandaGraphics.su | Share-link van opdrachtgever | BEVESTIGD |
+| LinkedIn | linkedin.com/company/panda-design-agency-suriname | S1 | VOORLOPIG |
 
-Bewust niet gebruikt: adres Grote Combeweg 15 (S2, secundair), beide telefoonnummers (conflict), testimonials en partnerstrook van pandanv.com (S3), oprichtingsjaar en teamgrootte (S1, zelfgerapporteerd).
+## Ontbreekt
 
-## Media
+| Onderdeel | Waar | Hoe vervangen |
+|---|---|---|
+| Logo | Header, favicon, footer | Vervang `.logo-word` door `<img>`/inline SVG |
+| 6 cases (naam, klant, jaar, rol, tekst) | `#werk` tegels + `.cases-store` | Per case: tekst in `<article id="case-0X">`, beeld in de tegel (zie HTML-commentaar) |
+| Projectbeelden | Tegels + case-dialoog | `<img>` in `.cover`, liefst ≥ 2000 px breed, WebP/AVIF |
+| Social preview-beeld | `<head>` | `og:image` toevoegen zodra er een beeld is |
 
-| Bestand | Bron-URL | Case | Maker/eigenaar | Rol Panda | Toestemming | Afmetingen | Crop | Status |
-|---|---|---|---|---|---|---|---|---|
-| Logo (SVG) | — | — | Panda | — | — | — | — | ONTBREEKT |
-| Hero hoofdbeeld | — | Case 01 | — | — | — | ≥ 2400×1500 | 16:10 desktop, 4:5 mobiel | ONTBREEKT |
-| Hero detail | — | Case 01 | — | — | — | ≥ 1200×1500 | 4:5 | ONTBREEKT |
-| Case 01 hoofd + 2 details | — | 01 | — | — | — | ≥ 2400 breed | 16:9, 1:1 | ONTBREEKT |
-| Case 02 hoofd + 2 details | — | 02 | — | — | — | ≥ 1600 breed | 4:5 | ONTBREEKT |
-| Case 03 hoofd + 2 details | — | 03 | — | — | — | ≥ 2400 breed | 3:2, 9:16 | ONTBREEKT |
-| Studiofoto | — | — | — | — | — | — | — | OPTIONEEL |
-| Reel + poster | — | — | — | — | — | — | — | OPTIONEEL |
-| Penseelstreken | eigen SVG + filter in `site/index.html` | — | origineel voor dit concept | — | n.v.t. | vector | — | BEVESTIGD (eigen werk) |
-| Favicon | `site/favicon.svg` | — | tijdelijk, geen merkteken | — | n.v.t. | 32×32 | — | VERVANGEN door logo |
+De penseelcovers in de tegels zijn decoratief en geen Panda-werk; ze verdwijnen zodra echte beelden binnen zijn.
 
-A1–A9 (findglocal-CDN) zijn niet gebruikt en worden niet gehotlinkt.
+Niet gebruikt: telefoonnummers uit directory (conflict), adres Grote Combeweg 15, testimonials van pandanv.com, naam van de CEO.
