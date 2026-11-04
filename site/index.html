@@ -13,7 +13,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.add("js")</script>
   <script src="assets/js/main.js" defer></script>
@@ -30,6 +30,15 @@
         <feComposite in="SourceGraphic" in2="bristles" operator="in" result="ink"/>
         <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="grain"/>
         <feDisplacementMap in="ink" in2="grain" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="dry-xl" x="-6%" y="-30%" width="112%" height="160%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3 14" result="soft"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.0022 0.09" numOctaves="4" seed="11" result="noise"/>
+        <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="n"/>
+        <feComposite in="soft" in2="n" operator="arithmetic" k2="8" k3="-7.5" k4="-1.85" result="bristles"/>
+        <feComposite in="SourceGraphic" in2="bristles" operator="in" result="ink"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="grain"/>
+        <feDisplacementMap in="ink" in2="grain" scale="7" xChannelSelector="R" yChannelSelector="G"/>
       </filter>
       <filter id="dry-sm" x="-6%" y="-40%" width="112%" height="180%" color-interpolation-filters="sRGB">
         <feGaussianBlur in="SourceAlpha" stdDeviation="1.5 2.5" result="soft"/>
@@ -93,7 +102,7 @@
         <span class="line"><span>blijft <em>hangen.</em></span></span>
       </h1>
       <div class="hero-foot">
-        <p class="hero-tags">Branding<span aria-hidden="true">/</span>Graphic&nbsp;design<span aria-hidden="true">/</span>Content<span aria-hidden="true">/</span>Advertising</p>
+        <p class="hero-tags">Branding <span aria-hidden="true">/</span> Graphic&nbsp;design <span aria-hidden="true">/</span> Content <span aria-hidden="true">/</span> Advertising</p>
         <p class="hero-place">Design studio<br>Paramaribo, Suriname</p>
         <a class="hero-scroll" href="#intro"><span>Scroll</span><span class="hero-scroll-line" aria-hidden="true"></span></a>
       </div>
