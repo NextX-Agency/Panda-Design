@@ -31,3 +31,9 @@
 - Live gecontroleerd via de Vercel-connector: HTML, CSS, JS en favicon geven 200 over HTTPS (HSTS), inhoud gelijk aan de lokaal geteste versie, `X-Robots-Tag: noindex, nofollow` actief.
 - Niet gedaan: de live URL in een browser renderen (sandbox blokkeert vercel.app). Browsertests zijn lokaal op dezelfde bestanden uitgevoerd.
 - Nog bewust: noindex aan, geen canonical, geen logo of portfoliobeelden.
+
+## Productie — 4 november 2026 (commit 52877f6)
+
+- Gedeployed als production op https://panda-design-eta.vercel.app (deployment dpl_EdjfKm4VyhmHTueCFHtt1bPkNFyh).
+- Live getest in Chromium: 17/17 checks geslaagd (menu, ankers, projectweergave, deep link, kopieer-e-mail, toetsenbord, reduced motion, zonder JS, axe, geen console-/netwerkfouten).
+- `noindex` staat nog bewust aan tot de echte content erin staat (zie docs/SCRAPE-PROMPT.md).
